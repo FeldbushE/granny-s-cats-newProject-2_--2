@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Бабуленькины котики</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="container">
+      <img class="logo-img" src="img/cat-fill.svg" alt="Бабуленькины котики" />
+      <span class="logo-texst">Бабуленькины котики</span>
+      <div alig="center">
+        <form>
+         <input type="button" value="Войти на сайт" onClick="Input()">
+        </form>
+       </div>
+    </header>
+    <div class="container">
+      <batton type="button" class="reload-data">Обновить данные о котах</batton>
+      <batton type="button" class="add-data" id="button-add-cat">Добавить кота</batton>
+      <main class="content__form">
+          <ul class="cats-list">
+          </ul>
+      </main>
+    </div>
+
+    <div class="root-popup">
+      <div class="popup popup_type_cats-info">
+        <div class="popup__container">
+          <button type="button" class="popup_close">x</button>
+          <img src="" alt="" class="popup__image">
+          <p class="popup__name"></p>
+          <p class="popup__text"></p>
+          
+        </div>
+      </div>
+  
+      <div class="popup popup_type_cats-add">
+        <div class="popup__container">
+          <button type="button" class="popup_close">x</button>
+          <form class="popup__form">
+            <input type="text" placeholder="id" name="id" id="id">
+            <input type="text" placeholder="Имя" name="name" id="name">
+            <input type="text" placeholder="Изображение" name="img_link" id="img_link">
+            <input type="text" placeholder="Описание" name="description" id="description">
+            <button type="submit">Отправить</button>
+          </form>        
+          
+        </div>
+      </div>
+
+      <div class="popup popup_type_cats-edit">
+        <div class="popup__container">
+          <button type="button" class="popup_close">x</button>
+          <form class="popup__form">
+            <input type="text" class="popup__form-input" placeholder="id" name="id">
+            <input type="text" class="popup__form-input" placeholder="Имя" name="name">
+            <input type="text" class="popup__form-input" placeholder="Изображение" name="img_link">
+            <input type="text" class="popup__form-input" placeholder="Описание" name="description">
+            <button type="submit">Отправить</button>
+          </form>        
+          
+        </div>
+      </div>
+    </div>
+
+    
+
+    <footer class="container">©2022 All rights reserved</footer>
+
+    <template id="card-template">
+        <li class="cats-list__item cat">
+            <img class="cat__image" src="" alt="котик" />
+            <button class="cat__delete">Удалить</button>
+            <button class="cat__edit">Редактировать</button>
+            <p class="cat__title"></p>
+            
+          </li>
+    </template>
+    
+    <script src="./cats.js" defer></script>
+    <script src="./script.js" defer></script>
+  </body>
+</html>
